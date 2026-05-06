@@ -12,12 +12,12 @@ Use this template: [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJim
 
 ## Demo
 
-Check [demo.stack.cai.im](https://demo.stack.cai.im)
+* Starter template demo: [demo.stack.jimmycai.com](https://demo.stack.jimmycai.com)
+* Dev build: [dev.stack.jimmycai.com](https://dev.stack.jimmycai.com)
 
 ## Documentation
 
-- [English](https://stack.cai.im)
-- [中文](https://stack.cai.im/zh)
+Visit [stack.jimmycai.com](https://stack.jimmycai.com)
 
 ## Copyright
 

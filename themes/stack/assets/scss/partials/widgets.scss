@@ -4,8 +4,8 @@
 
     .widget-icon {
         svg {
-            width: var(--widget-icon-size);
-            height: var(--widget-icon-size);
+            width: 32px;
+            height: 32px;
             stroke-width: 1.6;
             color: var(--body-text-color);
         }
@@ -17,10 +17,11 @@
     .tagCloud-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--spacing-sm);
+        gap: 10px;
 
         a {
-            @include card-style;
+            background: var(--card-background);
+            box-shadow: var(--shadow-l1);
             border-radius: var(--tag-border-radius);
             padding: 8px 20px;
             color: var(--card-text-color-main);
@@ -37,7 +38,9 @@
 /* Archives widget */
 .widget.archives {
     .widget-archive--list {
-        @include card-style;
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        background-color: var(--card-background);
     }
 
     .archives-year {
