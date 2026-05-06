@@ -1,0 +1,89 @@
+baseURL = "https://coderleechou.github.io/"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+languageCode = "zh-cn"
+pagination.pagerSize = 5
+title = "我的博客"
+theme = "stack"
+
+[permalinks]
+  post = "/p/:slug/"
+  page = "/:slug/"
+
+[params]
+  mainSections = ["posts"]
+  rssFullContent = true
+
+  [params.footer]
+    since = 2026
+
+  [params.sidebar]
+    emoji = "📝"
+    subtitle = "记录技术与生活"
+    avatar = "/img/avatar.png"
+
+  [params.article]
+    [params.article.license]
+      enabled = false
+
+  [params.widgets]
+    homepage = [
+      { type = "search" },
+      { type = "archives", params = { limit = 5 } },
+      { type = "categories", params = { limit = 10 } },
+      { type = "tag-cloud", params = { limit = 10 } },
+    ]
+    page = [{ type = "toc" }]
+
+  [params.comments]
+    enabled = false
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+[[menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/CoderLeechou"
+  [menu.social.params]
+    icon = "brand-github"
+
+[[menu.social]]
+  identifier = "rss"
+  name = "RSS"
+  url = "/index.xml"
+  [menu.social.params]
+    icon = "rss"
+
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = -100
+  [menu.main.params]
+    icon = "home"
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives"
+  weight = -90
+  [menu.main.params]
+    icon = "archives"
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search"
+  weight = -80
+  [menu.main.params]
+    icon = "search"
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about"
+  weight = -70
+  [menu.main.params]
+    icon = "user"
