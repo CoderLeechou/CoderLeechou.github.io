@@ -1,0 +1,18 @@
+# Hugo 生成的文件
+public/
+resources/_gen/
+.hugo_build.lock
+
+# 编辑器/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.log

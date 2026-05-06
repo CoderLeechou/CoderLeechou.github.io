@@ -1,0 +1,145 @@
+# ============================================================
+# 站点基础配置
+# ============================================================
+baseURL: "https://coderleechou.github.io/"
+languageCode: "zh-cn"
+defaultContentLanguage: "zh-cn"
+title: "我的博客"
+pagination:
+  pagerSize: 10
+theme: "PaperMod"
+
+# ============================================================
+# 启用 CJK 语言支持
+# ============================================================
+hasCJKLanguage: true
+
+# ============================================================
+# 构建选项
+# ============================================================
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# ============================================================
+# 压缩配置
+# ============================================================
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# ============================================================
+# 输出格式 (搜索功能必需)
+# ============================================================
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# ============================================================
+# PaperMod 主题参数
+# ============================================================
+params:
+  env: production
+  title: "我的博客"
+  description: "一个基于 Hugo 的个人博客，记录技术与生活"
+  keywords: ["博客", "技术", "Hugo"]
+  author: "CoderLeechou"
+  images: []
+
+  # 日期格式 (中文友好)
+  DateFormat: "2006年1月2日"
+
+  # 主题模式: light / dark / auto
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # 显示阅读时间
+  ShowReadingTime: true
+
+  # 显示文章字数
+  ShowWordCount: true
+
+  # 显示分享按钮
+  ShowShareButtons: false
+
+  # 显示文章导航 (上一篇/下一篇)
+  ShowPostNavLinks: true
+
+  # 显示面包屑导航
+  ShowBreadCrumbs: true
+
+  # 显示代码复制按钮
+  ShowCodeCopyButtons: true
+
+  # 在列表页显示 RSS 按钮
+  ShowRssButtonInSectionTermList: true
+
+  # 使用 Hugo 内置 TOC (目录)
+  UseHugoToc: true
+
+  # 首页模式: 使用 home-info 模式 (显示欢迎信息)
+  homeInfoParams:
+    Title: "你好 👋"
+    Content: "欢迎来到我的博客。这里记录我的技术学习笔记和生活感悟。"
+
+  # 社交图标
+  socialIcons:
+    - name: github
+      url: "https://github.com/CoderLeechou"
+    - name: rss
+      url: "/index.xml"
+
+  # Fuse.js 搜索配置
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# ============================================================
+# 导航菜单
+# ============================================================
+menu:
+  main:
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 10
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 50
+
+# ============================================================
+# Markdown 渲染配置 (CJK 排版优化)
+# ============================================================
+markup:
+  goldmark:
+    extensions:
+      cjk:
+        enable: true
+        eastAsianLineBreaks: true
+        eastAsianLineBreaksStyle: "css3draft"
+        escapedSpace: true
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false
